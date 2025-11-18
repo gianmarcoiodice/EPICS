@@ -1,0 +1,15 @@
+G3:Device(MT = Motor, PS = PowerSupply, GM = Gaussmeter):record
+
+read: rdDevice
+write: wrDevice
+
+GM: Gaussmeter
+G3:GM.rdBfield - read magn field
+G3:GM.rdVolt   - read voltage
+G3:GM.rdIdn    - read identity
+G3:GM.rdStatus - read status
+G3:GM.wrOnctrl - turn on or off
+
+PS: PowerSupply
+
+MT: Motor 

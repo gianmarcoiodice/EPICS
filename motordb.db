@@ -1,0 +1,12 @@
+record(motor, "$(user):mtr") {
+    field(DESC, "Motor control")
+    field(MRES, ) #Motor Step Size: = EGUS per rev / Steps per rev, e.g. 0.001, may be pos or neg
+    field(VELO, ) #EGU/s (Or field S which is rev/s)
+    # field(VAL,  ) # User Desired Value (Or DVAL for dial desired value?)
+    # Stop motor if switch is hit
+    field(EGU, "mm") #EGU of motor steps (deg? mm?)
+}
+
+record(bi, "$(user):switch1") {
+    field()
+}

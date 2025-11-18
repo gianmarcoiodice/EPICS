@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Main</name>
+  <width>1010</width>
+  <height>570</height>
+  <actions>
+    <action type="write_pv">
+      <description>Écrire PV</description>
+      <pv_name>$(iocadm:ONCTRL)</pv_name>
+      <value>1</value>
+    </action>
+  </actions>
+  <grid_color>
+    <color red="127" green="127" blue="127">
+    </color>
+  </grid_color>
+  <widget type="label" version="2.0.0">
+    <name>TITLE</name>
+    <class>TITLE</class>
+    <text>magnetic_HBZ</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>280</width>
+    <height>30</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>200</x>
+    <y>10</y>
+    <width>490</width>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>POS_frame_1</name>
+      <width>490</width>
+      <height>200</height>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>POS_frame_2</name>
+    <x>200</x>
+    <y>230</y>
+    <width>490</width>
+    <height>320</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CUR_frame_1</name>
+    <x>705</x>
+    <y>10</y>
+    <width>490</width>
+    <height>200</height>
+    <line_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CUR_frame_2</name>
+    <x>705</x>
+    <y>230</y>
+    <width>490</width>
+    <height>320</height>
+    <line_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>VOL_frame_1</name>
+    <x>1210</x>
+    <y>10</y>
+    <width>490</width>
+    <height>200</height>
+    <line_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>VOL_frame_2</name>
+    <x>1210</x>
+    <y>230</y>
+    <width>490</width>
+    <height>320</height>
+    <line_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>MOT_frame</name>
+    <x>10</x>
+    <y>50</y>
+    <width>180</width>
+    <height>120</height>
+    <line_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>MOT_text</name>
+    <text>Motor</text>
+    <x>50</x>
+    <y>60</y>
+    <width>83</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>POS_Plot</name>
+    <x>210</x>
+    <y>267</y>
+    <width>470</width>
+    <height>270</height>
+    <x_axis>
+      <title>Position (mm)</title>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Magnetic Field (G)</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>iodadm:POS</x_pv>
+        <y_pv>iocadm:FIELD</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>POS_Slider</name>
+    <x>250</x>
+    <y>146</y>
+    <width>350</width>
+    <height>10</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>POS_Update</name>
+    <pv_name>POS</pv_name>
+    <x>455</x>
+    <y>70</y>
+    <width>51</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>POS_Entry</name>
+    <pv_name>POS</pv_name>
+    <x>425</x>
+    <y>90</y>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>POS_text_1</name>
+    <text>Position settings (mm)</text>
+    <x>330</x>
+    <y>30</y>
+    <width>280</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="20.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>POS_text_2</name>
+    <text>Actual position is :</text>
+    <x>330</x>
+    <y>70</y>
+    <width>210</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>POS_text_3</name>
+    <text>New position :</text>
+    <x>330</x>
+    <y>100</y>
+    <width>110</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>POS_text_4</name>
+    <text>Magnetic field (G) as a function of position (mm)</text>
+    <x>227</x>
+    <y>237</y>
+    <width>510</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>CUR_Plot</name>
+    <x>715</x>
+    <y>267</y>
+    <width>470</width>
+    <height>270</height>
+    <x_axis>
+      <title>Current (A)</title>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>10.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Magnetic Field (G)</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>icoadm:MRI</x_pv>
+        <y_pv>iocadm:FIELD</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>CUR_Slider</name>
+    <pv_name>icoadm:MRI</pv_name>
+    <x>775</x>
+    <y>156</y>
+    <width>350</width>
+    <height>10</height>
+    <level_lolo>100.0</level_lolo>
+    <maximum>10.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CUR_Update</name>
+    <pv_name>icoadm:MRI</pv_name>
+    <x>995</x>
+    <y>80</y>
+    <width>51</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>CUR_Entry</name>
+    <pv_name>icoadm:MRI</pv_name>
+    <x>965</x>
+    <y>100</y>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CUR_text_1</name>
+    <text>Current settings (A)</text>
+    <x>855</x>
+    <y>40</y>
+    <width>280</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="20.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CUR_text_2</name>
+    <text>Actual current is :</text>
+    <x>855</x>
+    <y>80</y>
+    <width>210</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CUR_text_3</name>
+    <text>New current :</text>
+    <x>855</x>
+    <y>110</y>
+    <width>110</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CUR_text_4</name>
+    <text>Magnetic field (G) as a function of current (A)</text>
+    <x>732</x>
+    <y>237</y>
+    <width>510</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>VOL_Plot</name>
+    <x>1220</x>
+    <y>267</y>
+    <width>470</width>
+    <height>270</height>
+    <x_axis>
+      <title>Voltage (V)</title>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Magnetic FIeld (G)</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>iocadm:VOLT</x_pv>
+        <y_pv>iocadm:FIELD</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>2</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>VOL_text_4</name>
+    <text>Magnetic field (G) as a function of voltage (V)</text>
+    <x>1237</x>
+    <y>237</y>
+    <width>510</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>PSU_frame</name>
+    <x>10</x>
+    <y>190</y>
+    <width>180</width>
+    <height>120</height>
+    <line_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>PSU_text</name>
+    <text>Power supply</text>
+    <x>37</x>
+    <y>200</y>
+    <width>223</width>
+    <height>34</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>MOT_frame_4</name>
+    <x>10</x>
+    <y>330</y>
+    <width>180</width>
+    <height>120</height>
+    <line_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>MGM_text</name>
+    <text>Magnetometer</text>
+    <x>37</x>
+    <y>340</y>
+    <width>133</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>MG_frame</name>
+    <x>10</x>
+    <y>460</y>
+    <width>180</width>
+    <height>90</height>
+    <line_color>
+      <color name="INVALID" red="255" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>MG_text1</name>
+    <text>Actual value of Magnetic Field is</text>
+    <x>30</x>
+    <y>468</y>
+    <width>180</width>
+    <height>73</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>MG_Update</name>
+    <pv_name>iocadm:FIELD</pv_name>
+    <x>69</x>
+    <y>517</y>
+    <height>19</height>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>POS_frame_4</name>
+    <x>1720</x>
+    <y>230</y>
+    <width>490</width>
+    <height>320</height>
+    <line_color>
+      <color name="INVALID" red="255" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>POS_text_8</name>
+    <text>Magnetic field (G) as a function of time</text>
+    <x>1747</x>
+    <y>237</y>
+    <width>510</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="stripchart" version="2.1.0">
+    <name>Strip Chart</name>
+    <x>1740</x>
+    <y>270</y>
+    <width>440</width>
+    <height>267</height>
+    <y_axes>
+      <y_axis>
+        <title>Y</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>300.0</maximum>
+        <show_grid>false</show_grid>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <y_pv>iocadm:FIELD</y_pv>
+        <axis>0</axis>
+        <trace_type>2</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>4</point_type>
+        <point_size>4</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="stripchart" version="2.1.0">
+    <name>Strip Chart_1</name>
+    <x>1170</x>
+    <y>730</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>iocadm:ONCTRL</pv_name>
+    <x>40</x>
+    <y>380</y>
+    <width>110</width>
+    <height>40</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>iocadm:ONCTRL</pv_name>
+    <x>37</x>
+    <y>234</y>
+    <width>110</width>
+    <height>40</height>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_2</name>
+    <pv_name>iocadm:ONCTRL</pv_name>
+    <x>37</x>
+    <y>100</y>
+    <width>110</width>
+    <height>40</height>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>MG_frame_1</name>
+    <x>1720</x>
+    <y>10</y>
+    <width>490</width>
+    <height>200</height>
+    <line_color>
+      <color name="INVALID" red="255" green="0" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>MG_text1_2</name>
+    <text>Actual value of Magnetic Field is</text>
+    <x>1730</x>
+    <y>90</y>
+    <width>330</width>
+    <height>19</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>MG_Update_2</name>
+    <pv_name>iocadm:FIELD</pv_name>
+    <x>2001</x>
+    <y>90</y>
+    <width>160</width>
+    <height>19</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>MG_text1_3</name>
+    <text>Actual value of Voltage is</text>
+    <x>1260</x>
+    <y>90</y>
+    <width>280</width>
+    <height>74</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>MG_Update_3</name>
+    <pv_name>iocadm:FIELD</pv_name>
+    <x>1483</x>
+    <y>90</y>
+    <width>160</width>
+    <height>19</height>
+  </widget>
+</display>

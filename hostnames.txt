@@ -1,0 +1,3 @@
+raspberry pi: 222
+power supply: 100
+motor: ?
