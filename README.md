@@ -57,19 +57,5 @@ The mechanical bench contains the moving parts and the field source.
   - hysteresis (field vs. current),
   - basic statistics on field homogeneity.
 
----
 
-## Getting started
-
-### Prerequisites
-
-- **Python 3.x**
-- Recommended libraries:
-  - `numpy`, `scipy`, `matplotlib`, `pandas`
-  - hardware-related packages such as `pyserial` or vendor SDKs (depending on your setup)
-
-Install the Python dependencies with:
-
-```bash
-pip install -r requirements.txt
 
